@@ -24,7 +24,6 @@ playstore.on('message', message => {
     let total = numArry.reduce( (p, c) => p+c);
 
     message.channel.sendMessage(total);
-
   }
   
   if (command === "h") {
@@ -38,8 +37,6 @@ playstore.on('message', message => {
   // list of shit
   if (command === "say") {
     message.channel.sendMessage(args.join(" "));
-  }
-
   }
   // Shows persons profile picture
   if (command === "avatar") {
