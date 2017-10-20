@@ -27,7 +27,6 @@ playstore.on('message', message => {
   }
   
   if (command === "h") {
-    message.reply("Sending.. Sending.. Sending...");
     message.author.sendMessage("List of commands:");
     message.author.sendMessage("``=say (Says what you tell it to.)``");
     message.author.sendMessage("``=avatar (Posts a pic of your profile pic.)``");
