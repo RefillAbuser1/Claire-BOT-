@@ -1,16 +1,16 @@
 const Discord = require("discord.js");
-const playstore = new Discord.Client();
+const claire = new Discord.Client();
 const config = require("./config.json");
 
 playstore.on('ready', () => {
-  console.log(`Bot has started, with ${playstore.users.size} users, in ${playstore.channels.size} channels of ${playstore.guilds.size} guilds.`);
-  console.log(`Logged in as ${playstore.user.tag}!`);
+  console.log(`Bot has started, with ${claire.users.size} users, in ${claire.channels.size} channels of ${claire.guilds.size} guilds.`);
+  console.log(`Logged in as ${claire.user.tag}!`);
   console.log(`PlayStores is online`);
 
-playstore.user.setGame(`=h | I has ${playstore.guilds.size} Servers`);
+claire.user.setGame(`=h | I has ${claire.guilds.size} Servers`);
 });
  // Prefix settings
-playstore.on('message', message => {
+claire.on('message', message => {
   if(message.author.bot) return;
   if(!message.content.startsWith(config.prefix)) return;
 
@@ -48,4 +48,4 @@ playstore.on('message', message => {
   
 });
 // Token for bot to run
-playstore.login(process.env.BOT_TOKEN);
+claire.login(process.env.BOT_TOKEN);
